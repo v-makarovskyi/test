@@ -1,0 +1,22 @@
+@use './fonts';
+
+$color-dark: #000000;
+$color-light: #FFFFFF;
+$color-light-grey: #a0a2a4;
+$input-bg: #f8f8f8;
+$text-body: #55585b;
+$color-accent: #0989ff;
+
+$base-ff: 'Jost';
+
+:root {
+    --color-dark: #{$color-dark};
+    --color-light: #{$color-light};
+    --color-light-grey: #{$color-light-grey};
+    --color-input-bg: #{$input-bg};
+    --color-text-body: #{$text-body};
+    --color-accent: #{$color-accent};
+
+    --font-family-base: #{$base-ff};
+
+}

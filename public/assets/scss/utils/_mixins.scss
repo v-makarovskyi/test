@@ -1,0 +1,10 @@
+@use "sass:math";
+
+@function second-arg-calc($num, $maxWidth) {
+    $result: math.div($num, $maxWidth) * 100;
+    @return #{$result}vw;
+};
+
+@mixin fluid-text($max:48, $min:16) {
+    font-size: clamp(#{$min}px, second-arg-calc($max, 1400), #{$max}px);
+}
