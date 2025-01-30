@@ -40,7 +40,7 @@ $xxl-above: 1401px;
 }
 
 @mixin xxl {
-  @media (min-width: $xxl) {
+  @media (min-width: $xxl-above) {
     @content;
   }
 }
