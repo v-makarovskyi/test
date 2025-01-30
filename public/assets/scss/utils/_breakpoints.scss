@@ -1,0 +1,46 @@
+$xs: 575px;
+$sm: 576px;
+$md: 767px;
+$md-above: 768px;
+$lg: 991px;
+$lg-above: 992px;
+$xl: 1200px;
+$xl-above: 1201px;
+$xxl: 1400px;
+$xxl-above: 1401px;
+
+@mixin xs {
+  @media (max-width: $xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (min-width: $sm) and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: $md-above) and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: $lg-above) and (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: $xl-above) and (max-width: $xxl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: $xxl) {
+    @content;
+  }
+}
