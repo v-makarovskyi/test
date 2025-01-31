@@ -1,0 +1,48 @@
+@use "../utils/" as u;
+
+body {
+  font-family: var(--font-family-base), sans-serif;
+
+  @include u.mix-fluid-text(18, 16);
+
+  line-height: 1.3;
+  color: var(--color-text-body);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base);
+  @include u.mix-hover {
+    color: var(--color-blue-1);
+  }
+  @include u.mix-transition(color);
+
+  color: var(--color-heading-primary);
+  font-weight: 500;
+}
+
+h1 {
+  @include u.mix-fluid-text(60, 43);
+}
+
+h2 {
+  @include u.mix-fluid-text(40, 36);
+}
+
+h3 {
+  @include u.mix-fluid-text(30, 26);
+}
+
+h4 {
+  @include u.mix-fluid-text(20, 18);
+}
