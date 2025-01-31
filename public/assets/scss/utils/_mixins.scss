@@ -1,10 +1,20 @@
-@use "sass:math";
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+}
 
-@function second-arg-calc($num, $maxWidth) {
-    $result: math.div($num, $maxWidth) * 100;
-    @return #{$result}vw;
-};
+@mixin transition($property: all, $time: 0.3s, $func: ease-in-out, $delay: 0s) {
+  transition: $property $time $delay $func;
+}
 
-@mixin fluid-text($max:48, $min:16) {
-    font-size: clamp(#{$min}px, second-arg-calc($max, 1400), #{$max}px);
+@mixin hover {
+  @media (hover:hover) {
+    &:hover {
+      @content;
+    }
+  }
+  @media(hover: none) {
+    &:active {
+      @content;
+    }
+  }
 }
