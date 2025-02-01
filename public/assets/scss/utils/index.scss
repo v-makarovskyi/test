@@ -1,3 +1,4 @@
 @forward 'fonts';
 @forward 'root';
-@forward 'mixins';
+@forward 'mixins' as mix-*;
+@forward 'breakpoints' as bp-*;

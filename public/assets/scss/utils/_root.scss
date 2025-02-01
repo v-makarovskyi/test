@@ -1,22 +1,17 @@
-@use './fonts';
+@use "./fonts";
+@use "./colors" as clrs;
 
-$color-dark: #000000;
-$color-light: #FFFFFF;
-$color-light-grey: #a0a2a4;
-$input-bg: #f8f8f8;
-$text-body: #55585b;
-$color-accent: #0989ff;
-
-$base-ff: 'Jost';
+$base-ff: "Jost";
+$border: 1px solid var(--color-border-standart);
 
 :root {
-    --color-dark: #{$color-dark};
-    --color-light: #{$color-light};
-    --color-light-grey: #{$color-light-grey};
-    --color-input-bg: #{$input-bg};
-    --color-text-body: #{$text-body};
-    --color-accent: #{$color-accent};
+  @each $color, $shades in clrs.$colors {
+    @each $key, $value in $shades {
+      --color-#{$color}-#{$key}: #{$value};
+    }
+  }
 
-    --font-family-base: #{$base-ff};
+  --border: #{$border}; 
 
+  --font-family-base: #{$base-ff};
 }
