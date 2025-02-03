@@ -1,6 +1,7 @@
 @use "../../utils/" as u;
 
 .header {
+  
   &__top {
     border-bottom: 1px solid rgba($color: u.$black, $alpha: 0.1);
 
@@ -77,6 +78,7 @@
         &-label {
           font-size: 14px;
           color: var(--color-common-black);
+          font-weight: 500;
 
           &::after {
             position: relative;
@@ -94,13 +96,12 @@
           top: 140%;
           background-color: var(--color-common-white);
           z-index: 1;
-          box-shadow: 1px 1px 3px rgba(3,4,28,.15);
+          box-shadow: 1px 1px 3px rgba(3, 4, 28, 0.15);
           min-width: max-content;
           visibility: hidden;
           opacity: 0;
 
           @include u.mix-transition();
-         
 
           & > * {
             padding-bottom: 10px;
@@ -109,12 +110,12 @@
             }
           }
 
-          &.is-settings-list-open, &.is-language-list-open {
+          &.is-settings-list-open,
+          &.is-language-list-open {
             visibility: visible;
             opacity: 1;
             top: 110%;
           }
-
         }
       }
     }
