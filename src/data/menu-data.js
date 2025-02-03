@@ -7,22 +7,22 @@ export const menu_data = [
   },
   {
     id: 2,
-    trends: true,
+    single: true,
     title: "Тренды",
     link: "/trends",
   },
   {
     id: 3,
-    guides: true,
+    single: true,
     title: "Туториалы",
     link: "/guides",
   },
   {
     id: 4,
-    advices: true,
+    sub_menu: true,
     title: "Советы",
     link: "/advices",
-    big_menu: [
+    sub_menus: [
       {
         title: "Тренды",
         link: "/trends",
@@ -43,13 +43,31 @@ export const menu_data = [
   },
   {
     id: 5,
-    get_the_look: true,
+    sub_menu: true,
     title: "Get the look",
     link: "/get_the_look",
+    sub_menus: [
+      {
+        title: "Вечерний",
+        link: "/vechirnij",
+      },
+      {
+        title: "Дневной",
+        link: "/dennij",
+      },
+      {
+        title: "Особенный",
+        link: "/dlja-osoblivikh-vipadkiv",
+      },
+      {
+        title: "Модный",
+        link: "/modnij",
+      },
+    ],
   },
   {
     id: 6,
-    conyacts: true,
+    single: true,
     title: "Контакты",
     link: "/contacts",
   },
