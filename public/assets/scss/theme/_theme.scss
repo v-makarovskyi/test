@@ -1,5 +1,6 @@
 @use "../utils/" as u;
 
+
 body {
   overflow-x: hidden;
   font-family: var(--font-family-base), sans-serif;
@@ -11,9 +12,14 @@ body {
   font-weight: 400;
 }
 
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul {
+  padding: 0;
 }
 
 input,
@@ -68,5 +74,30 @@ img, video {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  padding-inline: 26px;
+  width: 100%;
+  height: 56px;
+  outline: none;
+  font-size: 14px;
+  background-color: var(--color-common-white);
+  color: var(--color-common-black);
+  border: 1px solid var(--color-border-input);
+
+  &::placeholder {
+    color: var(--color-placeholder-1);
+  }
+
+  &:focus {
+    border-color: var(--color-common-black);
+    &::placeholder {
+      opacity: 0;
+    }
+  }
 }
 
