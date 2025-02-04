@@ -1,7 +1,10 @@
 @use "../../utils/" as u;
 
 .header {
-  
+  &__inner {
+    box-shadow: 0px 2px 6px rgba($color: u.$black, $alpha: 0.21);
+  }
+
   &__top {
     border-bottom: 1px solid rgba($color: u.$black, $alpha: 0.1);
 
@@ -119,5 +122,31 @@
         }
       }
     }
+  }
+
+  &__bottom {
+    padding-block: 15px;
+  }
+
+  &__bottom-inner {
+    position: relative;
+  }
+
+  &__search {
+    width: 100%;
+  }
+
+  &__actions {
+    margin-left: 35px;
+    &-item:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  &__hamburger-button {
+    background-color: transparent;
+    color: currentColor;
+    border: none;
+    padding: 0;
   }
 }
