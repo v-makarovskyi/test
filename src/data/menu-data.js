@@ -2,15 +2,15 @@ export const menu_data = [
   {
     id: 1,
     home: true,
-    title: "Популярное",
+    title: "Дом",
     link: "/",
   },
-  {
+ /*  {
     id: 2,
     single: true,
     title: "Тренды",
     link: "/trends",
-  },
+  }, */
   {
     id: 3,
     single: true,
