@@ -1,20 +1,9 @@
-@use '../utils/' as u;
+@use "../utils/" as u;
 
 .logo {
-    
-    &__image {
-        width: 50%;
-        
-        @include u.bp-only(sm) {
-            width: 70%;
-        }
-
-        @include u.bp-only(lg) {
-            width: 30%;
-        }
-
-        @include u.bp-up(xl) {
-            width: 70%;
-        }
-    }
+  &__image {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
 }
