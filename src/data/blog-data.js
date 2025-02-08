@@ -1,7 +1,11 @@
+import blog_1_image from '../../src/images/blog/blog-sm-1.jpg'
+import blog_2_image from '../../src/images/blog/blog-sm-2.jpg'
+import blog_3_image from '../../src/images/blog/blog-sm-3.jpg'
+
 export const blog_data = [
   {
     id: 1,
-    image: "./assets/images/blog/blog-sm-1",
+    image: blog_1_image,
     date: "14.01.2025",
     author: "Иванна Петрова",
     title:
@@ -14,8 +18,8 @@ export const blog_data = [
     blog: "cosmetics",
   },
   {
-    id: 1,
-    image: "./assets/images/blog/blog-sm-2",
+    id: 2,
+    image: blog_2_image,
     date: "18.01.2025",
     author: "Иванна Петрова",
     title:
@@ -28,8 +32,8 @@ export const blog_data = [
     blog: "cosmetics",
   },
   {
-    id: 1,
-    image: "./assets/images/blog/blog-sm-3",
+    id: 3,
+    image: blog_3_image,
     date: "01.02.2025",
     author: "Элеонора Быстрицкая",
     title:
