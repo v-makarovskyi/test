@@ -22,22 +22,23 @@ export const BlogItem: FC<BlogItemProps> = ({ blog }): JSX.Element => {
             loading="lazy"
           />
         </a>
-        <div className="blog__item-date">{date}</div>
-      </header>
-      <div className="blog-item__body">
-        <div className="blog-item-tags">
-          <span>
-            <Tags />
+        <div className="blog-item__body">
+          <div className="blog__item-date">{date}</div>
+          <div className="blog-item__tags">
+            <span>
+              <Tags />
+            </span>
             {tags.map((tag, idx) => (
               <a key={idx} href="/">
                 {tag}
                 {idx < tags.length - 1 && ","}
               </a>
             ))}
-          </span>
+          </div>
         </div>
-        <h2 className="blog-item__title h4">{blog.title}</h2>
-      </div>
+      </header>
+
+      <h2 className="blog-item__title h4">{blog.title}</h2>
     </div>
   );
 };
