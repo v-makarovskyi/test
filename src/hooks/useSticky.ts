@@ -1,25 +1,17 @@
-import { useState, useEffect } from "react";
+import { useSyncExternalStore } from "react";
 
-
-export const useSticky = () => {
-    const [sticky, setSticky] = useState<boolean>(false)
-
-    function getStickyHeader() {
-        if(window.scrollY > 80) {
-            setSticky(true)
-        } else {
-            setSticky(false)
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', getStickyHeader);
-        return () => window.removeEventListener('scroll', getStickyHeader)
-    }, [])
-
-    return {
-        sticky
-    }
+function subscribe(callback: { (this: Window, ev: Event): any }) {
+  window.addEventListener("scroll", callback);
+  return () => window.removeEventListener("scroll", callback);
 }
 
+export const useSticky = (): { sticky: boolean } => {
+  const sticky: boolean = useSyncExternalStore(
+    subscribe,
+    (): boolean => window.scrollY > 80
+  );
 
+  return {
+    sticky,
+  };
+};
