@@ -46,7 +46,7 @@ h5,
 h6 {
   font-family: var(--font-family-base);
   @include u.mix-hover {
-    color: var(--color-blue-1);
+    color: u.$primary;
   }
   @include u.mix-transition(color);
 
@@ -76,9 +76,7 @@ img, video {
   height: auto;
 }
 
-input[type=text],
-input[type=email],
-input[type=password],
+
 textarea {
   padding-inline: 26px;
   width: 100%;
