@@ -6,7 +6,14 @@
   z-index: 1;
   overflow-x: hidden;
 
+  &__wrapper {
+    padding: 50px 60px 70px;
+    background-color: u.$white;
+    box-shadow: 0px 30px 70px rgba($color: u.$black, $alpha: 0.3);
+  }
+
   &__header {
+    position: relative;
     margin-bottom: 40px;
     text-align: center;
   }
@@ -26,6 +33,7 @@
     position: relative;
     margin-bottom: 40px;
     text-align: center;
+    z-index: 1;
 
     & > p {
       display: inline-block;
