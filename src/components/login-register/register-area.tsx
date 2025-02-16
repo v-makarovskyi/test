@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { RegisterForm } from "../forms/register-form";
 
 export const RegisterArea: FC = (): JSX.Element => {
   return (
@@ -20,6 +21,7 @@ export const RegisterArea: FC = (): JSX.Element => {
                 <div className="login__email">
                   <p>или Зарегистрируйтесь по Email</p>
                 </div>
+                <RegisterForm />
               </div>
             </div>
           </div>
