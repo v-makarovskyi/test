@@ -31,7 +31,7 @@ export const BlogItem: FC<BlogItemProps> = ({ blog }): JSX.Element => {
             {tags.map((tag, idx) => (
               <a key={idx} href="/">
                 {tag}
-                {idx < tags.length - 1 && ","}
+               {/*  {idx < tags.length - 1 && ","} */}
               </a>
             ))}
           </div>
