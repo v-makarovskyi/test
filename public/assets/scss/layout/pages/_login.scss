@@ -1,0 +1,35 @@
+@use '../../utils/' as u;
+
+.login {
+    padding-bottom: 140px;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+
+    &__shape {
+        &-1,
+        &-2,
+        &-3 {
+            position: absolute;
+            z-index: -1;
+            width: 7%;
+        }
+
+        &-1 {
+            top: 4%;
+            left: 12%;
+        }
+
+        &-2 {
+            top: 8%;
+            right: 9%;
+            width: 15%;
+            filter: drop-shadow(0 0 0.75rem crimson);
+        }
+
+        &-3 {
+            top: 67%;
+            left: 8%;
+        }
+    }
+}
