@@ -1,6 +1,10 @@
 @use "../../utils/" as u;
 
 .menus {
+  &__list {
+    margin-bottom: 0;
+  }
+
   &__item {
     position: relative;
     margin-right: 20px;
