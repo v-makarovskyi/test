@@ -18,7 +18,7 @@ export const RegisterArea: FC = (): JSX.Element => {
               </header>
               <div className="login__body">
                 <div className="login__email">
-                  <p>или зарегистрируйтесь по Email</p>
+                  <p>или Зарегистрируйтесь по Email</p>
                 </div>
               </div>
             </div>
