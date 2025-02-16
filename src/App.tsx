@@ -1,9 +1,11 @@
 import React from 'react';
+import { RegisterPage } from './pages/register';
+import './main-scss-app.scss'
 
 function App() {
   return (
-    <div className="App">
-    <div className="container">888</div>
+    <div className="app">
+      <RegisterPage />
     </div>
   );
 }
