@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 import { RegisterForm } from "../forms/register-form";
+import { LoginShapes } from "./login-shapes";
 
 export const RegisterArea: FC = (): JSX.Element => {
   return (
     <section className="login">
+      <LoginShapes />
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 col-xl-6">
