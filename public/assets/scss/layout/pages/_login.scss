@@ -55,4 +55,124 @@
       z-index: -1;
     }
   }
+
+  /*  styles for login(register) form */
+
+  &__form {
+    &-input-box-wrapper {
+      margin-bottom: 14px;
+    }
+
+    &-input-box {
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 34px;
+      }
+    }
+
+    &-title {
+      position: absolute;
+      top: -7px;
+      left: 20px;
+      font-size: 14px;
+      padding: 0 6px;
+      color: u.$black;
+      background-color: u.$white;
+      line-height: 1.2;
+    }
+
+    &-eye {
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      right: 30px;
+    }
+
+    &-open-eye {
+      @include u.mix-transition();
+      @include u.mix-hover {
+        cursor: pointer;
+        & svg {
+          color: u.$black;
+        }
+      }
+    }
+
+    &-remember {
+      $self: &;
+
+      margin-bottom: 20px;
+
+      & > label {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+      }
+
+      &-title {
+        color: u.$text-body-2;
+         & > a {
+          color: u.$blue;
+         }
+      }
+
+      &-emulator {
+        @include u.mix-square(20px);
+
+        position: relative;
+        display: inline-block;
+        border: 1px solid u.$border-input;
+        z-index: 1;
+        font-size: 15px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 20px;
+          height: 20px;
+
+          #{$self}-checkbox:checked + & {
+            background-color: u.$primary;
+            border-color: u.$primary;
+          }
+        }
+
+        &::after {
+          content: url("../../../../../src/images/common-icons/check.svg");
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          visibility: hidden;
+          opacity: 0;
+
+          @include u.mix-transition();
+
+          #{$self}-checkbox:checked + & {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding-inline: 30px;
+    padding-block: 14px;
+    background-color: u.$black;
+    color: u.$white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+
+    @include u.mix-hover {
+      background-color: u.$primary;
+    }
+  }
 }
