@@ -23,3 +23,7 @@
     }
   }
 }
+
+.visually-hidden {
+  @include u.mix-visually-hidden()
+}
