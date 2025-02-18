@@ -59,13 +59,7 @@ export const RegisterForm: FC = (): JSX.Element => {
         <div className="login__form-input-box">
           <input
             className="login__form-input input"
-            {...register("name", {
-              required: "Name - обязательное поле. Повторите попытку.",
-              pattern: {
-                value: /^([a-zA-Z'-]{0,50}|[а-яА-ЯёЁ'-]{0,21})$/,
-                message: `Допустимы символы [a-z, A-z], [а-я, А-Я], [',-]. Не более 21 символов`,
-              },
-            })}
+            {...register("name")}
             id="name"
             name="name"
             placeholder="Vladimir Makarovskyi"
@@ -93,9 +87,7 @@ export const RegisterForm: FC = (): JSX.Element => {
         <div className="login__form-input-box">
           <input
             className="login__form-input input"
-            {...register("password", {
-              required: "Password - обязательное поле. Повторите попытку.",
-            })}
+            {...register("password")}
             id="password"
             name="password"
             placeholder="min 6 character"
@@ -122,10 +114,7 @@ export const RegisterForm: FC = (): JSX.Element => {
         <label>
           <input
             className="login__form-remember-checkbox visually-hidden"
-            {...register("remember", {
-              required:
-                "Необходимо принять условия Сервиса и Политики конфиденциальности.",
-            })}
+            {...register("remember")}
             type="checkbox"
             id="remember"
             name="remember"
