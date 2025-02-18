@@ -246,5 +246,10 @@
     @include u.mix-hover {
       background-color: u.$primary;
     }
+
+    &:disabled {
+      background-color: grey;
+      cursor: not-allowed;
+    }
   }
 }

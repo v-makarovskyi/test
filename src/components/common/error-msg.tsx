@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
 type ErrorMsgProps = {
-  msg: string;
+  msg?: string;
 };
 
-export const ErrofMsg: FC<ErrorMsgProps> = ({ msg }): JSX.Element => {
-  return <div style={{ color: "red" }}>{msg}</div>;
+export const ErrorMsg: FC<ErrorMsgProps> = ({ msg }): JSX.Element => {
+  return <div style={{ color: "red", fontSize:12, marginTop:5 }}>{msg}</div>;
 };
