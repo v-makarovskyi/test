@@ -111,9 +111,9 @@
 
       &-title {
         color: u.$text-body-2;
-         & > a {
+        & > a {
           color: u.$blue;
-         }
+        }
       }
 
       &-emulator {
@@ -173,6 +173,11 @@
 
     @include u.mix-hover {
       background-color: u.$primary;
+    }
+
+    &:disabled {
+      background-color: grey;
+      cursor: not-allowed;
     }
   }
 }
